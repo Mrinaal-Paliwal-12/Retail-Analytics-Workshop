@@ -1,0 +1,8 @@
+setwd("C:/Users/T2910/Desktop/Desktop/MCA 201-23/TRIM 5/Retail Analytics/Walmart")
+data2 <- read.csv("walmart_data.csv")
+head(data2)
+variable.names(data2)
+model1<-lm(Sales ~ Promotion.Index +Walmart+FeatureAdvertising.Index+Holiday,data=data2)
+summary(model1)
+library(car)
+vif(model1)
